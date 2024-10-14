@@ -1,0 +1,17 @@
+<h1>Chats</h1>
+
+<% if @chats.any? %>
+    <ul>
+        <% @chats.each do |chat| %>
+            <li>
+                <strong><%= chat.title %></strong>
+                <p><%= chat.content %></p>
+                <small>Created at: <%= chat.created_at.strftime("%B %d, %Y %H:%M") %></small>
+            </li>
+        <% end %>
+    </ul>
+<% else %>
+    <p>No chats available.</p>
+<% end %>
+
+<%= link_to 'New Chat', new_chat_path, class: 'btn btn-primary' %>
