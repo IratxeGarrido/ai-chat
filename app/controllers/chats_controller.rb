@@ -1,5 +1,5 @@
 class ChatsController < ApplicationController
   def index
-    @chats = Chat.all
+    @chats = Chat.where(user: current_user)
   end
 end

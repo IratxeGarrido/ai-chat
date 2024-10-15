@@ -4,8 +4,7 @@
     <ul>
         <% @chats.each do |chat| %>
             <li>
-                <strong><%= chat.title %></strong>
-                <p><%= chat.content %></p>
+                <strong><%= chat.name %></strong>
                 <small>Created at: <%= chat.created_at.strftime("%B %d, %Y %H:%M") %></small>
             </li>
         <% end %>
